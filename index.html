@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | ThePathfinder</title>
+  </head>
+  <body style="text-align: center">
+    <canvas id="unity-canvas" style="width: 960px; height: 600px; background: #231F20"></canvas>
+    <script src="Build/ThePathfinder-WebGLBuild.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/ThePathfinder-WebGLBuild.data.unityweb",
+        frameworkUrl: "Build/ThePathfinder-WebGLBuild.framework.js.unityweb",
+        codeUrl: "Build/ThePathfinder-WebGLBuild.wasm.unityweb",
+        symbolsUrl: "Build/ThePathfinder-WebGLBuild.symbols.json.unityweb",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "Rakan",
+        productName: "ThePathfinder",
+        productVersion: "1.0",
+      });
+    </script>
+  </body>
+</html>
